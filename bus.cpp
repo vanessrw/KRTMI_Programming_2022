@@ -10,13 +10,24 @@ Bus :: Bus() {
     this-> merk = "";
     this-> kategori = "mobil";
     this-> lamaSewa = new int[hargaSewa];
-    //this-> biayaSewa = 0;
 }
 
 Bus :: Bus (int nomor, int tahun_keluaran, string merk, string kategori):
 nomor(nomor), tahun_keluaran(tahun_keluaran), merk(merk), kategori(kategori){
-    this -> lamaSewa = new int[hargaSewa];
-    //this-> biayaSewa = 0;
+}
+Bus :: Bus(const Bus &b) {
+    this-> nomor = b.nomor;
+    this-> tahun_keluaran = b.tahun_keluaran;
+    this-> merk = b.merk;
+    this-> kategori = b.kategori;
+}
+
+Bus& Bus :: operator=(const Bus &b){
+    this-> nomor = b.nomor;
+    this-> tahun_keluaran = b.tahun_keluaran;
+    this-> merk = b.merk;
+    this-> kategori = b.kategori;
+    return *this;
 }
 
 void Bus :: printInfo(){
@@ -27,7 +38,7 @@ void Bus :: printInfo(){
     cout << endl;
 }
 
-//void Bus:: biayaSewa(int lamaSewa){
-    //biayaSewa = lamaSewa * hargaSewa;
-//}
+long Bus:: biayaSewa(int lamaSewa){
+    return (lamaSewa * hargaSewa);
+}
 
