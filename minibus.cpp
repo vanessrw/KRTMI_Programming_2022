@@ -2,21 +2,30 @@
 
 #include "minibus.hpp"
 
-int Minibus:: hargaSewa = 1000000;
-
 Minibus :: Minibus() {
     this-> nomor = 0;
     this-> tahun_keluaran = 0;
     this-> merk = "";
     this-> kategori = "mobil";
     this-> lamaSewa = new int[hargaSewa];
-    //this-> biayaSewa = 0;
 }
 
 Minibus :: Minibus (int nomor, int tahun_keluaran, string merk, string kategori):
 nomor(nomor), tahun_keluaran(tahun_keluaran), merk(merk), kategori(kategori){
-    this -> lamaSewa = new int[hargaSewa];
-    //this-> biayaSewa = 0;
+}
+Minibus :: Minibus(const Minibus &m) {
+    this-> nomor = m.nomor;
+    this-> tahun_keluaran = m.tahun_keluaran;
+    this-> merk = m.merk;
+    this-> kategori = m.kategori;
+}
+
+Minibus& Minibus :: operator=(const Minibus &m){
+    this-> nomor = m.nomor;
+    this-> tahun_keluaran = m.tahun_keluaran;
+    this-> merk = m.merk;
+    this-> kategori = m.kategori;
+    return *this;
 }
 
 void Minibus :: printInfo(){
@@ -27,7 +36,14 @@ void Minibus :: printInfo(){
     cout << endl;
 }
 
-//void Minibus:: biayaSewa(int lamaSewa){
-    //biayaSewa = lamaSewa * hargaSewa;
-//}
+long Minibus:: biayaSewa(int lamaSewa){
+    if(lamaSewa <=5){
+        hargaSewa = 5000000;
+        return (hargaSewa);
+    }
+    else{
+        hargaSewa = 500000;
+        return (5000000 + (lamaSewa-5) * hargaSewa);
+    }
+}
 
