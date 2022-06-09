@@ -21,12 +21,12 @@ class Minibus {
     public :
         Minibus ();                                          //default-ctor
         Minibus (int nomor, int tahun_keluaran, string merk, string kategori);   //user-defined-ctor
-        
+        Minibus& operator =(const Minibus &c);
+        ~Minibus();
+
     void printInfo();
 
-    void biayaSewa(int lamaSewa);
-
-    void operator+=(int lamaSewa);
+    long biayaSewa(int lamaSewa);
 
 
 
