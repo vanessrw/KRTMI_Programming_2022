@@ -21,12 +21,12 @@ class Car {
     public :
         Car ();                                          //default-ctor
         Car (int nomor, int tahun_keluaran, string merk, string kategori);   //user-defined-ctor
+        Car& operator =(const Car &c);
+        ~Car();
         
     void printInfo();
 
-    void biayaSewa(int lamaSewa);
-
-    void operator+=(int lamaSewa);
+    long biayaSewa(int lamaSewa);
 
 
 
