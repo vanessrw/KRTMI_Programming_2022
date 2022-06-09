@@ -23,7 +23,7 @@ class Kendaraan {
 
         void printInfo();
 
-        void biayaSewa(int lamaSewa);
+        long biayaSewa(int lamaSewa);
 
 };
 
