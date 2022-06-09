@@ -21,12 +21,12 @@ class Bus {
     public :
         Bus ();                                          //default-ctor
         Bus (int nomor, int tahun_keluaran, string merk, string kategori);   //user-defined-ctor
-        
+        Bus& operator =(const Bus &b);
+        ~Bus();
+
     void printInfo();
 
-    void biayaSewa(int lamaSewa);
-
-    void operator+=(int lamaSewa);
+    long biayaSewa(int lamaSewa);
 
 
 
