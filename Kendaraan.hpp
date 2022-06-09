@@ -17,7 +17,7 @@ class Kendaraan {
     public:
         Kendaraan();
         Kendaraan(int nomor, int tahun_keluaran, string merk, string kategori);
-        Kendaraan(const Kendaraan& kendaraan);
+        Kendaraan(const Kendaraan &k);
         Kendaraan& operator=(const Kendaraan &k);
         ~Kendaraan();
 
