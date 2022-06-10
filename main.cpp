@@ -1,5 +1,3 @@
-/******** Hanny Margaretha Aritonang *********/
-
 #include "kendaraan.hpp"
 #include "koleksikendaraan.hpp"
 
@@ -22,56 +20,12 @@ int main(){
     bus.set_merk("Toyota");
     bus.get_merk();
 
-    bus.set_nomor(102);
-    bus.get_nomor();
-    bus.set_tahun(2012);
-    bus.get_tahun();
-    bus.set_merk("Daihatsu");
-    bus.get_merk();
-
-    bus.set_nomor(103);
-    bus.get_nomor();
-    bus.set_tahun(2013);
-    bus.get_tahun();
-    bus.set_merk("Nissan");
-    bus.get_merk();
-
-    
-    minibus.set_nomor(201);
-    minibus.get_nomor();
-    minibus.set_tahun(2011);
-    minibus.get_tahun();
-    minibus.set_merk("Toyota");
-    minibus.get_merk();
-
     minibus.set_nomor(202);
     minibus.get_nomor();
     minibus.set_tahun(2012);
     minibus.get_tahun();
     minibus.set_merk("Daihatsu");
     minibus.get_merk();
-
-    minibus.set_nomor(203);
-    minibus.get_nomor();
-    minibus.set_tahun(2013);
-    minibus.get_tahun();
-    minibus.set_merk("Nissan");
-    minibus.get_merk();
-
-    
-    mobil.set_nomor(301);
-    mobil.get_nomor();
-    mobil.set_tahun(2011);
-    mobil.get_tahun();
-    mobil.set_merk("Toyota");
-    mobil.get_merk();
-
-    mobil.set_nomor(302);
-    mobil.get_nomor();
-    mobil.set_tahun(2012);
-    mobil.get_tahun();
-    mobil.set_merk("Daihatsu");
-    mobil.get_merk();
 
     mobil.set_nomor(303);
     mobil.get_nomor();
@@ -120,7 +74,7 @@ void menu(KoleksiKendaraan &kk){
 }
 
 void pilih_kendaraan(Kendaraan &k, string merk){
-    int nomor_kendaraan;
+    int nomor_kendaraan, lamaSewa;
     
     cout<<"\n \n \t\t";
     cout<<"\n\t\t# # # # # # # # # # # # # # #";
@@ -132,8 +86,9 @@ void pilih_kendaraan(Kendaraan &k, string merk){
     cout<<"\n\t\t#       4. Kembali          #";
     cout<<"\n\t\t#       5. Exit             #";
     cout<<"\n\t\t# # # # # # # # # # # # # # #";
-    cout<<"\n\t\tMasukkan angka :       "; cin >> nomor_kendaraan;
+    cout<<"\n\t\tMasukkan angka     :       "; cin >> nomor_kendaraan;
     cout<<"_____________________________";
+    cout<<"\n\t\tMasukkan lama sewa :       "; cin >> lamaSewa;
     fflush(stdin);
     scanf("%d", &nomor_kendaraan);
 
@@ -141,13 +96,18 @@ void pilih_kendaraan(Kendaraan &k, string merk){
     {
         case 1:
             k.set_kategori ("bus");
-            cout << "Pilih Merk : ";
+            k.printInfo();
+            k.biayaSewa(lamaSewa);
             break;
         case 2:
             k.set_kategori("minibus");
+            k.printInfo();
+            k.biayaSewa(lamaSewa);
             break;
         case 3:
             k.set_kategori("mobil");
+            k.printInfo();
+            k.biayaSewa(lamaSewa);
             break;
         case 4:
             void menu();
