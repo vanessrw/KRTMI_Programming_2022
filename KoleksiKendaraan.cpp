@@ -40,7 +40,7 @@ KoleksiKendaraan::~KoleksiKendaraan(){
     delete[] this->koleksi;
 }
 
-void KoleksiKendaraan::operator<<(const Kendaraan &K){
+void KoleksiKendaraan::operator<<(Kendaraan &K){
     if(this->Neff < this->size){
         koleksi[this->Neff] = K;
         this->Neff++;

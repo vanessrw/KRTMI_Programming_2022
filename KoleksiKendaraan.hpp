@@ -16,7 +16,7 @@ class KoleksiKendaraan {
         KoleksiKendaraan& operator=(const KoleksiKendaraan &kk);
         ~KoleksiKendaraan();
 
-        void operator<<(const Kendaraan &K);
+        void operator<<(Kendaraan &K);
 
 };
 
