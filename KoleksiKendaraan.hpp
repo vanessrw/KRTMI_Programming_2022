@@ -5,7 +5,7 @@
 
 class KoleksiKendaraan {
     private:
-        Kendaraan* KoleksiKendaraan;
+        Kendaraan* koleksi;
         int size;
         int Neff;
 
@@ -16,7 +16,7 @@ class KoleksiKendaraan {
         KoleksiKendaraan& operator=(const KoleksiKendaraan &kk);
         ~KoleksiKendaraan();
 
-        KoleksiKendaraan& operator<<(const Kendaraan &K);
+        void operator<<(const Kendaraan &K);
 
 };
 
