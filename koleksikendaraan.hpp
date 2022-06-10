@@ -8,7 +8,7 @@ using namespace std;
 
 class KoleksiKendaraan {
     private :
-        char arrKategori[100], arrMerk[100];
+        string arrKategori[3], arrMerk[3];
         int arrTahun[100], arrNomor[100];
         int Neff;
     
