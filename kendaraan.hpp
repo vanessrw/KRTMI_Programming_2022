@@ -20,36 +20,24 @@ class Kendaraan {
     public :
         Kendaraan ();                                          //default-ctor
         Kendaraan (int nomor, int tahun_keluaran, string merk, string kategori);   //user-defined-ctor
-        Kendaraan& operator =(const Kendaraan &k);
-        ~Kendaraan();
+    
+    string get_kategori() const;
+    void set_kategori(string kategori);
 
-    void cars();
-        
+    int get_nomor() const;
+    void set_nomor(int nomor);
+
+    int get_tahun() const;
+    void set_tahun(int tahun);
+    
+    string get_merk() const;
+    void set_merk(string merk);
+
+    void pilih_kendaraan();
     void printInfo();
 
     long biayaSewa(int lamaSewa);
 
-
-
-};
-struct bus{
-    int bus_id;
-    int bus_year;
-    string bus_merk;
-    string bus_kategori;
-};
-struct minibus{
-    int minibus_id;
-    int minibus_year;
-    string minibus_merk;
-    string minibus_kategori;
-};
-
-struct car{
-    int car_id;
-    int car_year;
-    string car_merk;
-    string car_kategori;
 };
 
 
