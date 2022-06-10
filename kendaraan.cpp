@@ -24,18 +24,22 @@ void Kendaraan :: printInfo(){
 
 long Kendaraan:: biayaSewa(int lamaSewa){
     if(this->kategori=="bus"){
-        return(lamaSewa*10000);
+        cout << "Harga sewa = "<< lamaSewa*10000;
     }
     else if (this->kategori=="minibus"){
         if(lamaSewa<=5){
-            return(500000);
+            cout << "Harga sewa = " << 5000000;
         }
         else{
-            return((500000*(lamaSewa-5))+5000000);
+            cout << "Harga sewa = " << ((500000*(lamaSewa-5))+5000000);
         }
     }
+    else if(this-> kategori == "mobil"){
+        cout << "Harga sewa = " << 500000*lamaSewa ;
+    }
     else{
-        return(500000*lamaSewa);
+        cout << "Kategori tidak sesuai";
+        exit(1);
     }
 }
 
