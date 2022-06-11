@@ -3,6 +3,9 @@
 #include <cstring>
 using namespace std;
 
+// yah karena interface yang dibuat sudah tidak sesuai dengan spesifikasi soal,
+// jadi tidak bisa aku lanjutkan pemeriksaan pada kode implemntasi ini
+
 int Kendaraan::n_kendaraan = 0;
 
 Kendaraan::Kendaraan(char *n){
