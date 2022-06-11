@@ -1,10 +1,19 @@
 /******* Hanny Margaretha Aritonang *******/
 
 #include "koleksikendaraan.hpp"
+
 string arrKategori [100]= {"bus", "minibus","mobil"};
 string arrMerk [100] = {"Toyota","Daihatsu","Nissan"};
 int arrTahun [100] = {2011,2012,2013};
 int arrNomor [100] = {101,202,303};
+// hmm cukup unik
+// seharusnya yang dibuat kan adalah array of kendaraan ya
+// kendaraan disini adalah objek dari kelas yang udah kamu buat itu lhooo
+// bukan string
+// pembuatan objek kendaraan itu dilakukan di main.cpp
+
+// yah kerena spesifikasi pada koleksikendaraan.hpp kurang tepat
+// aku engga akan melakukan koreksi lebih lanjut di bagian implementasi ini
 
 KoleksiKendaraan :: KoleksiKendaraan() {
     this-> arrKategori[100]={};
