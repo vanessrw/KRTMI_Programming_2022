@@ -21,3 +21,5 @@ class KoleksiKendaraan {
 };
 
 #endif
+
+// sip mantap
