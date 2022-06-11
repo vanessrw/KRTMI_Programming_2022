@@ -53,3 +53,6 @@ long Kendaraan::biayaSewa(int lamaSewa) {
     }
 }
 
+// sip sudah bagus
+// tapi sayangnya kamu tidak membuat main.cpp untuk mengetes kelas yang telah kamu buat
+

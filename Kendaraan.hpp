@@ -12,6 +12,9 @@ class Kendaraan {
         string merk;
         string kategori;
         int lamaSewa;
+        // atribut lamaSewa sebenarnya enggak perlu karena dia nantinya
+        // hanya menjadi parameter formal dari fungsi biayaSewa()
+        
         //static int sewa_perjam;
 
     public:
