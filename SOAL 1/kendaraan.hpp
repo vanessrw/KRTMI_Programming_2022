@@ -13,9 +13,13 @@ class Kendaraan {
 
         int*lama_sewa;
         static int harga_sewa;
+        // dua variabel tersebut sama seperti milik hanny
+        // komentar dari aku sama seperti pada hanny
     
     public :
         Kendaraan()    // default-constructor 
+        // gak ada titik komanya di belakang, error nih kalau dicompile
+        
         Kendaraan(int nomor, int tahun_keluaran, string merk, string kategori);  //user-defined constructor
         Kendaraan(const Kendaraan &k);   // copy constructor
         Kendaraan& operator=(const Kendaraan &k);    // assignment operator
@@ -48,5 +52,9 @@ struct car{
     string car_merk;
     string car_kategori;
 };
+
+// tidak ada perintah untuk membuat ADT untuk setiap kategori kendaraan
+// kategori kendaraan cukup berupa string saja
+// kenapa kamu mempersulit diri sendiri :v
 
 #endif

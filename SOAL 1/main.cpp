@@ -1,5 +1,8 @@
 #include "car.hpp"
 
+// kenapa includenya car.hpp? :v menggokil
+// harusnya include "kendaraan.hpp"
+
 void menu(){
     int pilih;
     cout<<"--MENU--";
@@ -18,7 +21,7 @@ void menu(){
             break;
         case 2:
             printInfo();
-            breaki;
+            breaki; // breaki...
 
         case 3:
             exit(1);
@@ -67,3 +70,8 @@ void pilih_kendaraan(){
             pilih_kendaraan();
     }
 }
+
+// main ini tidak bisa dijalankan...
+// sebenarnya aku tidak mengharap ada menu menu seprti ini di main
+// hanya tunjukkan saja bagaimana kelas yang telah kamu buat bisa berfungsi ketika
+// dikirimkan maessage tertentu
