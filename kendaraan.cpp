@@ -2,10 +2,13 @@
 
 #include "kendaraan.hpp"
 
+// jadi hargaSewa yang merupakan static memiliki value berapa??
+
 Kendaraan :: Kendaraan() {
     this-> nomor = 0;
     this-> tahun_keluaran = 0;
     this-> merk = " ";
+    // seharusnya this->merk = "XXX"
     this-> kategori = "mobil";
     this-> lamaSewa = new int[hargaSewa];
 }
@@ -13,6 +16,12 @@ Kendaraan :: Kendaraan() {
 Kendaraan :: Kendaraan (int nomor, int tahun_keluaran, string merk, string kategori):
 nomor(nomor), tahun_keluaran(tahun_keluaran), merk(merk), kategori(kategori){
 }
+// kenapa di user defines constructor, lamaSewa juga tidak dialokasikan
+// seperti yang ada di constructor default?
+
+// mana implementasi dari setter dan getter?
+// implementasi pilih_kendarran() juga tidak ada? padahal kamu tulis di interface kendaraan.hpp
+// kalau emang gak mau diimplemntasikan, di bagian interface kendaraan.hpp tidak perlu dituliskan
 
 void Kendaraan :: printInfo(){
     cout << "Nomor : " << this-> nomor << endl;
@@ -42,4 +51,8 @@ long Kendaraan:: biayaSewa(int lamaSewa){
         exit(1);
     }
 }
+// ini return tipenya long tapi kenapa tidak ada nilai returnnya?
+
+// yah pada akhirnya atribut lamaSewa pada kelas kendaraan tidak digunakan sama sekali
+// karena seharusnya lamaSewa hanya menjadi parameter formal pada method biayaSewa()
 
