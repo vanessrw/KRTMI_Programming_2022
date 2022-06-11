@@ -34,6 +34,12 @@ int main(){
     mobil.set_merk("Nissan");
     mobil.get_merk();
 
+    // assign value sebaikanya tidak dilakukan satu persatu seprti itu,
+    // tapi sebaikanya dilakukan pada user-defined constructor
+    // dan yah kamu enggak mengimplementasikan setter di kendaraan.cpp
+    // jadi percuba juga karena valuenya enggak bakal masuk ke atribut objek
+    // main ini gak bisa dirun ya btw
+    
     KoleksiKendaraan arrKategori[]={}, arrMerk[]={}, arrTahun[]={}, arrNomor[]={};
 
 }
