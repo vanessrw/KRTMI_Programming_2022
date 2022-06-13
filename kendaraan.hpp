@@ -12,8 +12,6 @@ class Kendaraan {
         int tahun_keluaran;
         string merk;
         string kategori;
-       
-        static int hargaSewa;
         
     public :
         Kendaraan();                                          //default-ctor
