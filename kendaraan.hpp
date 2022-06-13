@@ -1,5 +1,3 @@
-/******** Hanny Margaretha Aritonang *********/
-
 #ifndef __KENDARAAN__
 #define __KENDARAAN__
 
