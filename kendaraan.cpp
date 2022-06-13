@@ -1,5 +1,3 @@
-/******* Hanny Margaretha Aritonang *******/
-
 #include "kendaraan.hpp"
 
 Kendaraan :: Kendaraan() {
