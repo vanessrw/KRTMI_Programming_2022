@@ -30,6 +30,7 @@ KoleksiKendaraan::KoleksiKendaraan(const KoleksiKendaraan &KK){
 KoleksiKendaraan& KoleksiKendaraan::operator=(const KoleksiKendaraan &KK){
     this->size = KK.size;
     this->Neff = KK.Neff;
+    delete[] this->koleksi;
     this->koleksi = new Kendaraan[this->size];
     for(int i = 0; i < this->Neff; i++){
         this->koleksi[i]=KK.koleksi[i];
@@ -46,3 +47,9 @@ void KoleksiKendaraan::operator<<(Kendaraan &K){
         this->Neff++;
     }
 }
+
+//KoleksiKendaraan& KoleksiKendaraan::operator<<(Kendaraan &K){
+//    koleksi[this->Neff] = K;
+//    this->Neff++;
+//    return *this;
+//}

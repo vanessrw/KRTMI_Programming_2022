@@ -12,11 +12,12 @@ class KoleksiKendaraan {
     public:
         KoleksiKendaraan();
         KoleksiKendaraan(int size);
-        KoleksiKendaraan(const KoleksiKendaraan &kk);
-        KoleksiKendaraan& operator=(const KoleksiKendaraan &kk);
+        KoleksiKendaraan(const KoleksiKendaraan &KK);
+        KoleksiKendaraan& operator=(const KoleksiKendaraan &KK);
         ~KoleksiKendaraan();
 
         void operator<<(Kendaraan &K);
+        KoleksiKendaraan& operator<<(const Kendaraan &K);
 
 };
 

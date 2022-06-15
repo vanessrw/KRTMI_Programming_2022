@@ -11,8 +11,6 @@ class Kendaraan {
         int tahun_keluaran;
         string merk;
         string kategori;
-        int lamaSewa;
-        //static int sewa_perjam;
 
     public:
         Kendaraan();
