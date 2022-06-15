@@ -14,8 +14,10 @@ int main(){
     //uji biaya sewa
     cout << k1.biayaSewa(5) << endl;
 
-    //soal 2
+    //soal 2b
     KoleksiKendaraan KK;
+    KK << k_def;
+    KK << k1;
 
     return 0;
 }
