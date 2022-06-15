@@ -52,4 +52,3 @@ long Kendaraan::biayaSewa(int lamaSewa) {
         return(500000*lamaSewa);
     }
 }
-
