@@ -17,4 +17,5 @@ int main(){
     //soal 2
     KoleksiKendaraan KK;
 
+    return 0;
 }
