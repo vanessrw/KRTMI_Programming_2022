@@ -1,61 +1,58 @@
-#include "koleksi.h"
+#include "koleksi.hpp"
+#include "kendaraan.hpp"
 #include <iostream>
-#include <cstring>
+
 using namespace std;
 
-// yah karena interface yang dibuat sudah tidak sesuai dengan spesifikasi soal,
-// jadi tidak bisa aku lanjutkan pemeriksaan pada kode implemntasi ini
 
-int Kendaraan::n_kendaraan = 0;
-
-Kendaraan::Kendaraan(char *n){
-    this->name = new char[strlen(n)];
-    strcpy(this->name, n);
+KoleksiKendaraan::KoleksiKendaraan(){
+    this->size = 100;
     this->num_of_kendaraan = 0;
-    this->kendaraan_list = new char *[5000];
-    n_kendaraan++;
+    this->koleksi = new Kendaraan[this->size];
+    this->kendaraan = new Kendaraan[this->size];
 }
 
-Kendaraan::Kendaraan(const Kendaraan &Kendaraan){
-    this->name = new char[strlen(Kendaraan.getName())];
-    strcpy(this->name, kendaraan.getName());
-    this->num_of_kendaraan = kendaraan.num_of_kendaraan;
-    this->kendaraan_list = new char *[255];
-    for (int i = 0; i < Kendaraan.num_of_kendaraan; i++)
-    {
-        this->kendaraan_list[i] = new char[strlen(Kendaraan.kendaraan_list[i])];
-        strcpy(this->kendaraan_list[i], Kendaraan.kendaraan_list[i]);
+KoleksiKendaraan::KoleksiKendaraan(int size){
+    this-> size = size;
+    this-> num_of_kendaraan = 0;
+    this-> koleksi = new Kendaraan [this->size];
+    this->kendaraan = new Kendaraan[this->size];
+}
+
+KoleksiKendaraan::KoleksiKendaraan(const KoleksiKendaraan &KK){
+    this->size = KK.size;
+    this->num_of_kendaraan = KK.num_of_kendaraan;
+    this->koleksi = new Kendaraan[this->size];
+    this->kendaraan = new Kendaraan[this->size];
+    for(int i = 0; i < this->num_of_kendaraan; i++){
+        koleksi[i] = KK.koleksi[i];
     }
-    n_kendaraan++;
 }
 
-// menambah kendaraan sesuai kapasitas array
-void Kendaraan::addKendaraan(char *Kendaraan){
-    if (n_kendaraan < 101) {
-        this->num_of_kendaraan++;
-        this->kendaraan_list[this->num_of_kendaraan - 1] = new char[strlen(Kendaraan)];
-        strcpy(this->kendaraan_list[this->num_of_kendaraan - 1], Kendaraan);
+KoleksiKendaraan& KoleksiKendaraan::operator=(const KoleksiKendaraan &KK){
+    this->size = KK.size;
+    this->num_of_kendaraan = KK.num_of_kendaraan;
+    delete[] this->koleksi;
+    this->koleksi = new Kendaraan[this->size];
+    this->kendaraan = new Kendaraan[this->size];
+    for(int i = 0; i < this->num_of_kendaraan; i++){
+        this->koleksi[i]=KK.koleksi[i];
+    }
+}
+
+KoleksiKendaraan::~KoleksiKendaraan(){
+    delete[] this->koleksi;
+}
+
+
+
+void KoleksiKendaraan::operator<<(KoleksiKendaraan &KK){
+    if(this->num_of_kendaraan < this->size){
+        for (int i=0; i< this->num_of_kendaraan; i++){
+            this->kendaraan[this->num_of_kendaraan] = KoleksiKendaraan[this->num_of_kendaraan];
         }
     else{
         cout << "Gagal menambahkan kendaraan, list penuh !" << endl;
     }
 }
-
-int Kendaraan::getNumOfKendaraan() const{
-    return this->num_of_kendaraan;
-}
-
-void Kendaraan::viewKendaraanList() const{
-    if (this->num_of_kendaraan > 0){
-        for (int i = 0; i < this->num_of_kendaraan; i++){
-            cout << (i + 1) << ". " << this->kendaraan_list[i] << endl;
-        }
-    }
-    else{
-        cout << "List kendaraan kosong." << endl;
-    }
-}
-
-int Kendaraan::getNumOfKendaraan(){
-    return Kendaraan::n_kendaraan;
 }
