@@ -21,5 +21,4 @@ class KoleksiKendaraan {
         int num_of_kendaraan; // jumlah kendaraan yang ada pada kendaraan_list (Neff)
         
 };
-
 #endif
